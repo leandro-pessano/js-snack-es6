@@ -23,3 +23,11 @@ const listaBici = [
     peso : 18
   },
 ];
+
+let temp = listaBici[0];
+listaBici.forEach((e) => {
+  if (e.peso < temp.peso) {
+    temp = e;
+  }
+});
+console.log(`La bici più leggera è: ${temp.nome} e pesa ${temp.peso}`);
